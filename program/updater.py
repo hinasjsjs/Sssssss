@@ -57,10 +57,10 @@ def updater():
 @sudo_users_only
 async def update_repo(_, message: Message):
     chat_id = message.chat.id
-    msg = await message.reply("🔄 `جاري جلب معلومات المبرمج  ...`")
+    msg = await message.reply("🔄 `جاري جلب معلومات مبرمج السوࢪس ›`")
     update_avail = updater()
     if update_avail:
-        await msg.edit("👤 يمكن شراء بوت بحقوقك كامل \n\n• او نسخه سورس بحقوقك بأرخص الأسعار حسابي الوحيد :  @GGG66 .")
+        await msg.edit("👤 يمكن شراء بوت بحقوقك كامل \n\n‹ او نسخه سورس بحقوقك بأرخص الأسعار حسابي الوحيد :  @s_l_3 .")
         system("git pull -f && pip3 install -r requirements.txt")
         execle(sys.executable, sys.executable, "main.py", environ)
         return
@@ -72,6 +72,6 @@ async def update_repo(_, message: Message):
 async def restart_bot(_, message: Message):
     msg = await message.reply("`restarting bot...`")
     args = [sys.executable, "main.py"]
-    await msg.edit("✅ إعادة تشغيل البوت\n\n• الآن يمكنك استخدام هذا البوت مرة أخرى.")
+    await msg.edit("✅ إعادة تشغيل البوت\n\n𝁫 الآن يمكنك استخدام هذا البوت مرة أخرى .")
     execle(sys.executable, *args, environ)
     return
