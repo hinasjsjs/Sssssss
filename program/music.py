@@ -42,9 +42,9 @@ async def ytdl(format: str, link: str):
 @Client.on_message(command(["تشغيل", f"play@{BOT_USERNAME}"]) & other_filters)
 async def play(c: Client, m: Message):
     await m.delete()
-    do = requests.get(f"https://api.telegram.org/bot5423302496:AAE-wjlOvIPx6eslXarjgr-2JoBe_GqM2Ir/getChatMember?chat_id=@IIlI4l&user_id={m.from_user.id}").text
+    do = requests.get(f"https://api.telegram.org/bot5750946190:AAFasmhWFu7zAaY-0fjCbOtwbdgRQ430YeQ/getChatMember?chat_id=@pykarlos&user_id={m.from_user.id}").text
     if do.count("left") or do.count("Bad Request: user not found"):
-        await m.reply_text("᥀︙عذࢪآ ، عمࢪي عليك الاشتࢪاك في قناة البوت اولآ  \n— — — — — — — — — — — —\n - @IIlI4l ↶ ")
+        await m.reply_text("𝁫 : عذࢪآ ، عمࢪي عليك الاشتࢪاك في قناة البوت اولآ  \n— — — — — — — — — — — —\n - @pykarlos ↶ ")
     else:
         replied = m.reply_to_message
         chat_id = m.chat.id
@@ -114,7 +114,7 @@ async def play(c: Client, m: Message):
                     )
         if replied:
             if replied.audio or replied.voice:
-                suhu = await replied.reply("᥀︙ **تنزيل الصوت ...**")
+                suhu = await replied.reply("𝁫 :  **تنزيل الصوت ...**")
                 dl = await replied.download()
                 link = replied.link
                 if replied.audio:
@@ -132,12 +132,12 @@ async def play(c: Client, m: Message):
                     await suhu.delete()
                     await m.reply_photo(
                         photo=f"{IMG_1}",
-                        caption=f"᥀︙ **تمت إضافة المسار إلى قائمة الانتظار »** `{pos}`\n\n📍 **العنوان:** [{songname}]({link})| موسيقى`\n💭**محادثة:** `{chat_id}`\n🎧 **بواسطه:** {m.from_user.mention()}",
+                        caption=f"𝁫 :  **تمت إضافة المسار إلى قائمة الانتظار »** `{pos}`\n\n📍 **العنوان:** [{songname}]({link})| موسيقى`\n💭**محادثة:** `{chat_id}`\n🎧 **بواسطه:** {m.from_user.mention()}",
                         reply_markup=keyboard,
                     )
                 else:
                     try:
-                        await suhu.edit("᥀︙ ** الانضمام إلى vc...**")
+                        await suhu.edit("𝁫 :  ** الانضمام إلى vc...**")
                         await call_py.join_group_call(
                             chat_id,
                             AudioPiped(
@@ -159,10 +159,10 @@ async def play(c: Client, m: Message):
             else:
                 if len(m.command) < 2:
                     await m.reply(
-                        "᥀︙ الرد على ** ملف صوتي ** أو ** أعط شيئًا للبحث .**"
+                        "𝁫 :  الرد على ** ملف صوتي ** أو ** أعط شيئًا للبحث .**"
                     )
                 else:
-                    suhu = await c.send_message(chat_id, "᥀︙**جار البحث**")
+                    suhu = await c.send_message(chat_id, "𝁫 : **جار البحث**")
                     query = m.text.split(None, 1)[1]
                     search = ytsearch(query)
                     if search == 0:
@@ -190,7 +190,7 @@ async def play(c: Client, m: Message):
                                 )
                             else:
                                 try:
-                                    await suhu.edit("᥀︙ ** جاࢪ الانضمام الى المكالمة...**")
+                                    await suhu.edit("𝁫 :  ** جاࢪ الانضمام الى المكالمة...**")
                                     await call_py.join_group_call(
                                         chat_id,
                                         AudioPiped(
@@ -213,14 +213,14 @@ async def play(c: Client, m: Message):
         else:
             if len(m.command) < 2:
                 await m.reply(
-                    "᥀︙ الرد على ** ملف صوتي ** أو ** أعط شيئًا للبحث .**"
+                    "𝁫 :  الرد على ** ملف صوتي ** أو ** أعط شيئًا للبحث .**"
                 )
             else:
-                suhu = await c.send_message(chat_id, "᥀︙**تم ࢪوحي جارر ... البحث**")
+                suhu = await c.send_message(chat_id, "𝁫 : **تم ࢪوحي جارر ... البحث**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
-                    await suhu.edit("᥀︙ **لم يتم العثور على نتائج .**")
+                    await suhu.edit("𝁫 :  **لم يتم العثور على نتائج .**")
                 else:
                     songname = search[0]
                     url = search[1]
@@ -244,7 +244,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("᥀︙ **جاࢪ الانضمام الى المكالمة...**")
+                                await suhu.edit("𝁫 :  **جاࢪ الانضمام الى المكالمة...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -262,4 +262,4 @@ async def play(c: Client, m: Message):
                                 )
                             except Exception as ep:
                                 await suhu.delete()
-                                await m.reply_text(f"᥀︙ حدث خطأ تئكد من المكالمه مفتوحه  اولآ: `{ep}`")
+                                await m.reply_text(f"𝁫 :  حدث خطأ تئكد من المكالمه مفتوحه  اولآ: `{ep}`")
