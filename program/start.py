@@ -52,18 +52,18 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f"""📍 **اهلا بك {message.from_user.mention()} !**\n
-📍 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية! ᥀︙**
+        f"""📍 **اهلا بك {message.from_user.mention()}  .**\n
+📍 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **انا بوت استطيع تشغيل الاغاني والموسيقى في المكالمات  الصوتية . 𝁫 : **
 
-᥀︙ **لمعرفة اوامر هذا البوت اضغط على » الاوامر الاساسية!**
+𝁫 :  **لمعرفة اوامر هذا البوت اضغط على » الاوامر الاساسية .**
 
-᥀︙ **لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل!**
+𝁫 :  **لمعرفة طريقة تشغيل هذا البوت اضغط على » طريقة التشغيل .**
 """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "• اضف البوت الى مجموعتڪ •",
+                        "‹ اضف البوت الى مجموعتڪ ‹",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
@@ -77,12 +77,12 @@ async def start_(client: Client, message: Message):
                         "‹ قناة المطور ›", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "‹ قناة البوت ›", url=f"https://t.me/IIlI4l"
+                        "‹ قناة البوت ›", url=f"https://t.me/c_p_8"
                     ),
                 ],
                 [
                     InlineKeyboardButton(
-                        "‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url="https://t.me/vrrrrvr"
+                        "‹ 𝖣𝖾𝗏𝖤𝗏𝖺𝗇 𝖳𝖾𝖠𝗆 .", url="https://t.me/c_p_8"
                     )
                 ],
             ]
@@ -102,15 +102,15 @@ async def alive(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/c_p_8"),
                 InlineKeyboardButton(
-                    "‹ مطور السوࢪس ›", url=f"https://t.me/GGG66"
+                    "‹ مطور السوࢪس ›", url=f"https://t.me/s_l_3"
                 ),
             ]
         ]
     )
 
-    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙البوت يعمل بشكل طبيعي\n᥀︙حساب المساعد : [{ALIVE_NAME}] \n\n**شكرا لثقتكم بنا في اضافه البوت لتشغيل الموسيقى** ᥀"
+    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n𝁫 : البوت يعمل بشكل طبيعي\n𝁫 : حساب المساعد : [{ALIVE_NAME}] \n\n**شكرا لثقتكم بنا في اضافه البوت لتشغيل الموسيقى** ᥀"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -129,15 +129,15 @@ async def src(client: Client, message: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/vrrrrvr"),
+                InlineKeyboardButton("‹ قناة السوࢪس ›", url=f"https://t.me/c_p_8"),
                 InlineKeyboardButton(
-                    "‹ مطور السورس ›", url=f"https://t.me/GGG66"
+                    "‹ مطور السورس ›", url=f"https://t.me/s_l_3"
                 ),
             ]
         ]
     )
 
-    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n᥀︙اهلا بك في سوࢪس اެيفان\n᥀︙اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**᥀︙تابع تحديثاتي : @DJJJJJe** ᥀"
+    alive = f"**هلا {message.from_user.mention()}, i'm {BOT_NAME}**\n\n𝁫 : اهلا بك في سوࢪس تࢪوكس\n𝁫 : اختصاص البوت تشغيل الموسيقى و الفيديو في الدردشة الصوتية \n\n**𝁫 : تابع تحديثاتي : @c_p_8** ᥀"
 
     await message.reply_photo(
         photo=f"{ALIVE_IMG}",
@@ -149,9 +149,9 @@ async def src(client: Client, message: Message):
 @Client.on_message(command(["بنك", f"ping@{BOT_USERNAME}"]) & ~filters.edited)
 async def ping_pong(client: Client, message: Message):
     start = time()
-    m_reply = await message.reply_text("جاري الحساب...")
+    m_reply = await message.reply_text("جاري الحساب . . .")
     delta_ping = time() - start
-    await m_reply.edit_text("🏓 `اابنك!!`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
+    await m_reply.edit_text("🏓 `البنك . .`\n" f"⚡️ `{delta_ping * 1000:.3f} ms`")
 
 
 @Client.on_message(command(["فحص", f"uptime@{BOT_USERNAME}"]) & ~filters.edited)
@@ -161,6 +161,6 @@ async def get_uptime(client: Client, message: Message):
     uptime = await _human_time_duration(int(uptime_sec))
     await message.reply_text(
         "🤖 حاله البوت:\n"
-        f"• **المدة:** `{uptime}`\n"
-        f"• **وقت التشغيل:** `{START_TIME_ISO}`"
+        f"‹ **المدة:** `{uptime}`\n"
+        f"‹ **وقت التشغيل:** `{START_TIME_ISO}`"
     )
